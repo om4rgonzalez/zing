@@ -1,0 +1,25 @@
+{
+  "name": "zing",
+  "version": "1.0.0",
+  "description": "estadisticas de uso de la app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/om4rgonzalez/zing.git"
+  },
+  "author": "Marcelo Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/om4rgonzalez/zing/issues"
+  },
+  "homepage": "https://github.com/om4rgonzalez/zing#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.16"
+  }
+}
