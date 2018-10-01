@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const Usuario = require('../server_usuario/models/usuario');
-const permisos = require('../src/permisos.json');
+// const permisos = require('../src/permisos.json');
 
 
 // =====================
@@ -54,31 +54,32 @@ const validarToken = async(token) => {
 // =====================
 // Verifica AdminRole
 // =====================
-let verifica_Permiso = async(usuario) => {
+// let verifica_Permiso = async(usuario) => {
 
-    // let usuario = req.usuario;
+//     // let usuario = req.usuario;
 
-    for (var p of permisos) {
-        // console.log("precedencia: " + usuario.rol.precedencia);
-        // console.log("url del archivo: " + p.url.trim());
-        // console.log("url del request:" + req.url);
-        if (p.url.trim() === usuario.url.trim()) {
-            // console.log("rol del usuario: " + usuario.rol.precedencia);
-            // console.log(p.roles);
-            // if (usuario.rol.precedencia in p.roles) {
-            if (p.roles.includes(usuario.precedencia)) {
-                return true;
-            } else
-                return false;
-        }
+//     for (var p of permisos) {
+//         // console.log("precedencia: " + usuario.rol.precedencia);
+//         // console.log("url del archivo: " + p.url.trim());
+//         // console.log("url del request:" + req.url);
+//         if (p.url.trim() === usuario.url.trim()) {
+//             // console.log("rol del usuario: " + usuario.rol.precedencia);
+//             // console.log(p.roles);
+//             // if (usuario.rol.precedencia in p.roles) {
+//             if (p.roles.includes(usuario.precedencia)) {
+//                 return true;
+//             } else
+//                 return false;
+//         }
 
-    }
+//     }
 
-};
+// };
 
 
 module.exports = {
     // verificaToken,
-    validarToken,
-    verifica_Permiso
+    validarToken
+    // ,
+    // verifica_Permiso
 }

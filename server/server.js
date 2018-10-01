@@ -27,7 +27,7 @@ app.use(require('./routes/index'));
 app.use(require('./server_direccion/server_direccion'));
 // app.use(require('./server_entidades/server_entidades'));
 app.use(require('./server_persona/server_persona'));
-// app.use(require('./server_usuario/server_usuario'));
+app.use(require('./server_usuario/server_usuario'));
 app.use(require('./server_contacto/server_contacto'));
 // app.use(require('./server_configuracion/server-configuracion'));
 // app.use(require('./server_pedido/server_pedido'));
