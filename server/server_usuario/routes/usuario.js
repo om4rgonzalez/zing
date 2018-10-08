@@ -433,6 +433,42 @@ app.post('/usuario/deshabilitar/', async function(req, res) {
             });
         }
     }
-})
+});
+
+app.post('/usuario/pagar_suscripcion/', async function(req, res) {
+
+    let billingPlan = await funciones.crearPlanPayPal('Suscripcion Mensual', 'Pago de suscripcion mensual por el uso de la aplicacion ZING',
+        '4032031087659974', 'visa', 9, 2021, 111, 'Fernando', 'Soruco');
+    // console.log('billing plan');
+    // console.log(billingPlan);
+
+});
+
+
+app.post('/usuario/pagar_suscripcion/', async function(req, res) {
+
+});
+
+
+app.post('/paypal/success/', async function(req, res) {
+
+    console.log('El pago de la suscripcion se realizo correctamente');
+
+});
+
+
+
+app.post('/paypal/success/', async function(req, res) {
+
+    console.log('El pago de la suscripcion se realizo correctamente');
+
+});
+
+
+app.post('/paypal/cancel/', async function(req, res) {
+
+    console.log('El pago se cancelo');
+
+});
 
 module.exports = app;

@@ -7,6 +7,7 @@ if (process.env.NODE_ENV == 'prod') {
 // process.env.PORT = process.env.PORT || 3002;
 
 //URL DEL SERVICIO
+
 process.env.URL_SERVICE = process.env.URL_SERVICE || 'http://localhost:'
 
 //Entorno
@@ -20,10 +21,6 @@ if (process.env.NODE_ENV == 'prod') {
 } else {
     urlDB = 'mongodb://sa:Bintech123@ds211143.mlab.com:11143/zing'
 }
-
-
-
-
 
 
 process.env.URLDB = urlDB;
@@ -41,3 +38,13 @@ process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
 //  SEED de autenticación
 // ============================
 process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';
+
+// ===========================
+//  direcciones success y cancel para paypal
+// ===========================
+if (process.env.NODE_ENV == 'prod') {
+    process.env.URL_SERVICE = 'http://18.217.143.92:3000/';
+
+} else {
+    process.env.URL_SERVICE = 'https://zzing.herokuapp.com/';
+}

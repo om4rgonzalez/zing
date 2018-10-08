@@ -19,8 +19,11 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "credit-card-type": "^7.1.0",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",
-    "mongoose": "^5.2.16"
+    "mongoose": "^5.2.16",
+    "node-uuid": "^1.4.8",
+    "paypal-rest-sdk": "^1.8.1"
   }
 }
